@@ -108,13 +108,12 @@ TRACK/
 4. **Stop Both Servers**  
    - Once the backend and frontend are verified running, **stop both terminals** (`Ctrl + C`).
 
-5. **Configure the Routes Folder**  
+5. **Configure the Root Folder**  
    ```sh
-   cd backend/routes
    npm init -y
    ```
 
-   - This creates `package.json` and `package-lock.json`.
+   - This creates `package.json` and `package-lock.json in the root folder`.
 
 6. **Install Concurrently**  
    ```sh
@@ -142,7 +141,6 @@ TRACK/
 
 ---
 
-This ensures a structured and complete setup process. Let me know if you need any tweaks! 🚀
 
 ## 🏗️ Technologies Used  
 
