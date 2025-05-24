@@ -85,11 +85,8 @@ app.get("/", (req, res) => {
   res.send("Smart City Dashboard Backend is Running");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
-const frontendBuildPath = path.join(__dirname, "frontend", "build");
+// Correct frontend build path relative to backend folder
+const frontendBuildPath = path.join(__dirname, "..", "frontend", "build");
 
 // Serve static React files
 app.use(express.static(frontendBuildPath));
@@ -97,4 +94,8 @@ app.use(express.static(frontendBuildPath));
 // Serve React app for all unmatched routes (SPA support)
 app.get("*", (req, res) => {
   res.sendFile(path.join(frontendBuildPath, "index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
