@@ -42,16 +42,15 @@ const TrafficAlert = () => {
       infoWindowRef.current = new InfoWindow();
 
       // Add Click Listener to Get Traffic Data on Click
-      newMap.addListener("click", (event) => {
-        const clickedLocation = {
-          lat: event.latLng.lat(),
-          lng: event.latLng.lng(),
-        };
-        console.log("Map Clicked", clickedLocation);
-        if (service) {
-          checkTrafficCongestion(newMap, clickedLocation, service);
-        }
-      });
+newMap.addListener("click", (event) => {
+  const clickedLocation = {
+    lat: event.latLng.lat(),
+    lng: event.latLng.lng(),
+  };
+  checkTrafficCongestion(newMap, clickedLocation, service);
+});
+
+
     }
   }, [mapLoaded]);
 
@@ -87,35 +86,33 @@ const TrafficAlert = () => {
   };
 
   // Function to show traffic alert
-  const showTrafficAlert = (map, position, trafficFactor) => {
-    if (!infoWindowRef.current) return;
-  
-    let message = "Smooth Traffic";
-    let color = "green";
-    let emoji = "🏎️";
-  
-    if (trafficFactor > 0.9) {
-      message = "Heavy Traffic! Expect Delays";
-      color = "red";
-      emoji = "⚠️";
-    } else if (trafficFactor > 0.82) {
-      message = "Moderate Traffic";
-      color = "orange";
-      emoji = "✋";
-    }
-  
-    // Send data to backend
-    saveTrafficData(position, trafficFactor);
-  
-    infoWindowRef.current.setContent(`
-      <div style="color: ${color};">
-        <b>${emoji} ${message}</b> <br/>
-        Traffic Factor: ${trafficFactor.toFixed(2)}
-      </div>
-    `);
-    infoWindowRef.current.setPosition(position);
-    infoWindowRef.current.open(map);
-  };
+const showTrafficAlert = (map, position, trafficFactor) => {
+  if (!infoWindowRef.current) return;
+
+  let message = "Smooth Traffic";
+  let color = "green";
+  let emoji = "🏎️";
+
+  if (trafficFactor > 1.7) {
+    message = "Heavy Traffic! Expect Delays";
+    color = "red";
+    emoji = "⚠️";
+  } else if (trafficFactor > 1.25) {
+    message = "Moderate Traffic";
+    color = "orange";
+    emoji = "✋";
+  }
+
+  infoWindowRef.current.setContent(`
+    <div style="color: ${color}; font-size: 14px;">
+      <b>${emoji} ${message}</b><br/>
+      Traffic Factor: ${trafficFactor.toFixed(2)}
+    </div>
+  `);
+  infoWindowRef.current.setPosition(position);
+  infoWindowRef.current.open(map);
+};
+
   
   // Function to send traffic data to the backend
   const saveTrafficData = async (location, trafficFactor) => {

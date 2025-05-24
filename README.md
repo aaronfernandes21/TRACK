@@ -1,3 +1,4 @@
+
 #  TRACK - A Smart City Dashboard for Mangalore  
 
 ![Homepage Screenshot](/frontend/public/one.png) <!-- Replace # with the actual image path -->
@@ -172,7 +173,5 @@ This project is developed by:
 This project is licensed under the **MIT License**. See the full license text in the [LICENSE](LICENSE) file.  
 
 ---
-
-
 
 
