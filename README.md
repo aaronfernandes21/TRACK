@@ -34,7 +34,7 @@ TRACK provides:
 |---------------|----------------|------------|
 | ![Severe](/frontend/public/t1.png) | ![Moderate](/frontend/public/t1.png) | ![Low](/frontend/public/t1.png) |  
 
----
+
 
 ## 📂 Folder Structure  
 
@@ -79,7 +79,6 @@ TRACK/
 
 
 
----
 
 ## 🔧 Installation & Setup  
 
@@ -140,7 +139,7 @@ TRACK/
 
    - This will run both frontend and backend together.
 
----
+
 
 
 ## 🏗️ Technologies Used  
@@ -150,14 +149,12 @@ TRACK/
 - **APIs:** Google Maps API, OpenWeather API  
 - **Styling:** CSS  
 
----
 
 ## 📷 Screenshots  
 
 ![Dashboard](/frontend/public/two.png) <!-- Replace # with actual image path -->  
 ![Map Integration](/frontend/public/three.png)  
 
----
 
 ## 👥 Contributors  
 
@@ -165,13 +162,12 @@ This project is developed by:
 - **[@aaronfernandes21](https://github.com/aaronfernandes21)**  
 - **[@evitabarboza](https://github.com/evitabarboza)**   
 
----
+
 
 
 ## 📜 License  
 
 This project is licensed under the **MIT License**. See the full license text in the [LICENSE](LICENSE) file.  
 
----
 
 
