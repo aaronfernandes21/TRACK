@@ -117,7 +117,7 @@ const showTrafficAlert = (map, position, trafficFactor) => {
   // Function to send traffic data to the backend
   const saveTrafficData = async (location, trafficFactor) => {
     try {
-      const response = await fetch("http://localhost:5000/save-traffic", {
+      const response = await fetch("REACT_APP_BACKEND_URL/save-traffic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ location, trafficFactor }),

@@ -35,7 +35,7 @@ const Weather = () => {
 
  const fetchWeather = useCallback(async () => {
   try {
-    const response = await fetch("http://localhost:5000/weather?city=mangalore"); // Update API call
+    const response = await fetch("REACT_APP_BACKEND_URL/weather?city=mangalore"); // Update API call
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }
