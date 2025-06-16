@@ -32,7 +32,7 @@ TRACK provides:
 
 | Severe Traffic | Moderate Traffic | Low Traffic |
 |---------------|----------------|------------|
-| ![Severe](/frontend/public/t1.png) | ![Moderate](/frontend/public/t1.png) | ![Low](/frontend/public/t1.png) |  
+| ![Severe](/frontend/public/t1.png) | ![Moderate](/frontend/public/t1.png) | ![Low](Screenshot 2025-06-16 133636.png) |  
 
 
 
