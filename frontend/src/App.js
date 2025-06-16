@@ -28,6 +28,7 @@ function App() {
               <h1 className="app-title">
                 Welcome to <span className="track-title">T R A C K</span>
               </h1>
+              
               <h3 className="full-form">
                 <em>Transport Routing, Alerts, and Congestion Knowledge</em>
               </h3>
@@ -55,8 +56,8 @@ function App() {
               {/* Footer */}
               <footer className="weather-footer">
                 <div className="footer-content">
-                  <p>© {new Date().getFullYear()} TRACK. All Rights Reserved.</p>
-                  <p>Developed with ❤️ by Pookie & Potato</p>
+                  <p>© {new Date().getFullYear()} TRACK. </p>
+                  <p>Developed with ❤️ by Evita and Aaron</p>
                 </div>
               </footer>
             </motion.div>
